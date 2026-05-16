@@ -85,5 +85,30 @@
 
 ---
 
+# 4. Fragmented Packets :
+- Nmap provides fragmentation of data to scan the port
+- command is : nmap -f 192.168.1.1
+- -f splits the data into 8 bytes.
+- -ff splits the data into 16 bytes.
+- This scan is used to bypass the firewall.
+- It is relatively slow.
 
-- 
+---
+
+# 5. Ideal/Zombie scan :
+- In this scan attacker uses an weak or vulnerable ip address to scan target system.
+- Heance Attacker using third ip address to scan target he remains stealthy or undetectable.
+- Firstly attacker sends SYN/ACK packet to zombie machine and machine response with RST flag with containing its ip address.
+- Attacker used this ip address to send TCP SYN on target machine
+  1. If the target port is closed it send RST flag to ideal machine and ideal machine does not respond by itself.
+  2. If the target port is open it sends SYN/ACK flag to ideal machine and ideal machine sends RST flag with incrimented id
+  3. If the target machine is behind the firewall it does not respond with any flag.
+
+- For zombie scan following consideration must be checked :
+  1. IP ID should be incremental
+  2. Zombie machine should be ideal.
+  3. Zombie machine should reach the target system
+
+---
+
+### By Completing this repositery we have learned Nmap advanced port scan topic.
