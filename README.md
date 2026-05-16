@@ -63,3 +63,6 @@
 - If you want to scan with new TCP flag combination you can use this scan
 - command is : --scanflag RSTSYNFIN
 - Here you can set RST,SYN,FIN Flag at same time.
+- This is the invalid combination for open port and heance any port wont response this
+- But closed port wll response this with RST flag set.
+- This type of scan can be used to scan port when Firewall is blocking previous methods of scanning.
