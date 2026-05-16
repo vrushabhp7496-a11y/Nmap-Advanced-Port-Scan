@@ -66,3 +66,24 @@
 - This is the invalid combination for open port and heance any port wont response this
 - But closed port wll response this with RST flag set.
 - This type of scan can be used to scan port when Firewall is blocking previous methods of scanning.
+
+
+---
+
+# 3. Decoy or spoofing :
+- In some system we can use spoofed IP address to scan network
+- This type of scan hide real ip address of the attacker
+- This will use Multiple ip address to scan server including Real and fake ip address.
+- Target system responds to each and every IP address without knowing which is real and which is fake.
+- This typpe is used when we are scanning very secured network,Confuse IDS system.
+- This scan type is relatively slow because it uses too many ip address
+- Many firewall identify the decoy and blocks them.
+- Spoofed IP address scanning is only used when there is no need of response ass DDOS attacks
+- In spoofing the response is sent to Fake ip address
+- Command for Decoy ip adrress scan is : nmap -D 10.0.0.1,10.0.0.2,10.0.0.3,ME 192.168.1.1
+- Command for spoofed ip address is : nmap -S 10.0.0.5 -e eth0 192.168.1.1
+
+---
+
+
+- 
